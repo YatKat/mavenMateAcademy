@@ -10,5 +10,4 @@ public enum KindOfFruit {
     BANANA,
     TANGERINE,
     ORANGE,
-    WATERMELLON
 }

@@ -2,14 +2,12 @@ package jsonHomeTask;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Fruits {
-        KindOfFruit kindOfFruit;
-        int shelfLife;
-        LocalDate comeDate;
-        BigDecimal price;
+       private KindOfFruit kindOfFruit;
+       private int shelfLife;
+       private LocalDate comeDate;
+       private BigDecimal price;
 
     public Fruits(KindOfFruit kindOfFruit, int shelfLife, LocalDate comeDate, BigDecimal price) {
         this.kindOfFruit = kindOfFruit;
@@ -48,5 +46,15 @@ public class Fruits {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Fruits{" +
+                "kindOfFruit=" + kindOfFruit +
+                ", shelfLife=" + shelfLife +
+                ", comeDate=" + comeDate +
+                ", price=" + price +
+                "}\n";
     }
 }
