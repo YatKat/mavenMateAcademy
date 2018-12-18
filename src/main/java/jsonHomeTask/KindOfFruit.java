@@ -1,5 +1,5 @@
 package jsonHomeTask;
-
+// class of types of fruits
 public enum KindOfFruit {
     APPLE,
     PEAR,

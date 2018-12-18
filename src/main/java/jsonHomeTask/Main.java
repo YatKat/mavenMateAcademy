@@ -28,28 +28,29 @@ public class Main {
                 LocalDate.of(2018, 12, 16), new BigDecimal(52.00)));
 
         List<Fruits> newDelivery2 = new ArrayList<>();
-        newDelivery1.add(new Fruits(KindOfFruit.CHERRY, 15,
+        newDelivery2.add(new Fruits(KindOfFruit.CHERRY, 15,
                 LocalDate.of(2018, 12, 18), new BigDecimal(150.00)));
-        newDelivery1.add(new Fruits(KindOfFruit.PEAR, 300,
+        newDelivery2.add(new Fruits(KindOfFruit.PEAR, 300,
                 LocalDate.of(2018, 12, 18), new BigDecimal(108.00)));
-        newDelivery1.add(new Fruits(KindOfFruit.PLUM, 300,
+        newDelivery2.add(new Fruits(KindOfFruit.PLUM, 300,
                 LocalDate.of(2018, 12, 18), new BigDecimal(90.00)));
         try {
             shop.addFruits(path, newDelivery1);
             System.out.println("Add fruits and write delivery to file fruitsInfo.json.");
             shop.saveFruits(pathToDBFile);
-            System.out.println("Saved all fruits in the List to File.");
+            System.out.println("Saved all fruits in the List to fruitsDataBase.json.");
             shop.addFruits("delivery2.json", newDelivery2);
             System.out.println("New delivery! Hurry up!");
+            shop.saveFruits(pathToDBFile);
             shop.loadFruits(pathToDBFile);
             System.out.println("Updated the shop list with info from DataBase");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        shop.getSpoiledFruits(LocalDate.of(2019,1,04));
-        shop.getAvailableFruits(LocalDate.of(2019, 1, 04));
-        shop.getSpoiledFruits(LocalDate.of(2019,1,04), KindOfFruit.CHERRY);
-        shop.getAvailableFruits(LocalDate.of(2018, 9, 17), KindOfFruit.BANANA);
+        shop.getSpoiledFruits(LocalDate.of(2019, 1, 4));
+        shop.getAvailableFruits(LocalDate.of(2019, 1, 4));
+        shop.getSpoiledFruits(LocalDate.of(2019, 1, 4), KindOfFruit.CHERRY);
+        shop.getAvailableFruits(LocalDate.of(2018, 12, 15), KindOfFruit.BANANA);
         shop.getAddedFruits(LocalDate.of(2018, 12, 18));
         shop.getAddedFruits(LocalDate.of(2018, 12, 18), KindOfFruit.PLUM);
     }

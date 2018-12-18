@@ -1,0 +1,16 @@
+[ {
+  "kindOfFruit" : "CHERRY",
+  "shelfLife" : 15,
+  "comeDate" : "18/12/2018",
+  "price" : 150
+}, {
+  "kindOfFruit" : "PEAR",
+  "shelfLife" : 300,
+  "comeDate" : "18/12/2018",
+  "price" : 108
+}, {
+  "kindOfFruit" : "PLUM",
+  "shelfLife" : 300,
+  "comeDate" : "18/12/2018",
+  "price" : 90
+} ]
