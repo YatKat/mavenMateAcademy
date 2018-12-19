@@ -1,5 +1,5 @@
 package jsonHomeTask;
-
+// class of types of fruits
 public enum KindOfFruit {
     APPLE,
     PEAR,
@@ -10,5 +10,4 @@ public enum KindOfFruit {
     BANANA,
     TANGERINE,
     ORANGE,
-    WATERMELLON
 }
